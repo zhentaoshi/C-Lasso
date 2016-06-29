@@ -31,8 +31,9 @@
         <h1>
 <a id="c-lasso-replication-package" class="anchor" href="#c-lasso-replication-package" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>C-Lasso Replication Package</h1>
 
-<h4>
-<a id="liangjun-su-zhentao-shi-and-peter-phillips" class="anchor" href="#liangjun-su-zhentao-shi-and-peter-phillips" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Liangjun Su, Zhentao Shi and Peter Phillips</h4>
+<h2>
+<a id="liangjun-su-zhentao-shi-and-peter-phillips" class="anchor" href="#liangjun-su-zhentao-shi-and-peter-phillips" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://www.mysmu.edu/faculty/ljsu/">Liangjun Su</a>, <a href="http://www.zhentaoshi.com/">Zhentao Shi</a> and <a href="http://korora.econ.yale.edu/phillips/">Peter Phillips</a>
+</h2>
 
 <h3>
 <a id="computation-environment" class="anchor" href="#computation-environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Computation Environment</h3>
@@ -42,9 +43,10 @@
 <p>The results in the paper are generated under</p>
 
 <ul>
-<li>Matlab 8.5</li>
-<li>CVX 2.1 (<a href="http://cvxr.com/cvx/download/">http://cvxr.com/cvx/download/</a>)</li>
-<li>Mosek 7.1 (<a href="https://www.mosek.com/resources/downloads">https://www.mosek.com/resources/downloads</a>).</li>
+<li><a href="http://www.mathworks.com/products/matlab/">Matlab 8.5</a></li>
+<li><a href="http://cvxr.com/cvx/download/">CVX 2.1</a></li>
+<li>
+<a href="https://www.mosek.com/resources/downloads">Mosek 7.1</a>.</li>
 </ul>
 
 <p>CVX must be installed and linked with Matlab, and Mosek is invoked as the solver through the command <code>cvx_solver mosek</code>. Without Mosek, a user can still run the code with CVX if he comments out this line; however, the default solvers in CVX, such as <code>SDPT3</code> or <code>SeDuMi</code>.</p>
@@ -81,7 +83,7 @@
 <p>The scripts in folders <code>simulations</code> generate the simulation results. The master files are either <code>master_**</code> or <code>**_super</code>. Super parameters, such as <code>N</code>, <code>T</code> and <code>Rep</code>, should be provided outside of the main function or script.</p>
 
 <h3>
-<a id="cvx-tips" class="anchor" href="#cvx-tips" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CVX Tips</h3>
+<a id="implementation-tips" class="anchor" href="#implementation-tips" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implementation Tips</h3>
 
 <p>As emphasized in Section 3.2 of the Supplementary Material, we take advantage of convex programming to reduce the computational burden of high-dimensional optimization in each substep of the iterative algorithm. It is straightforward to utilize the convexity in the linear models. Probit regression with a linear index is a convex problem. To implement in CVX, we must formulate it as a disciplined convex programming (<a href="http://cvxr.com/dcp">http://cvxr.com/dcp</a>), which CVX accepts.</p>
       </section>
