@@ -34,18 +34,23 @@
 <h4>
 <a id="liangjun-su-zhentao-shi-and-peter-phillips" class="anchor" href="#liangjun-su-zhentao-shi-and-peter-phillips" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Liangjun Su, Zhentao Shi and Peter Phillips</h4>
 
+<h3>
+<a id="computation-environment" class="anchor" href="#computation-environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Computation Environment</h3>
+
 <p>We provide all code for the empirical applications and simulations in <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2448189">“Identifying Latent Structures in Panel Data”</a>. Please contact Zhentao Shi (<a href="zhentao.shi@cuhk.edu.hk">zhentao.shi@cuhk.edu.hk</a>) if you have any question about the code.</p>
 
 <p>The results in the paper are generated under</p>
 
 <ul>
 <li>Matlab 8.5</li>
-<li>CVX 2.1 (<a href="http://cvxr.com/cvx/download/">http://cvxr.com/cvx/download/</a>)<br>
-</li>
+<li>CVX 2.1 (<a href="http://cvxr.com/cvx/download/">http://cvxr.com/cvx/download/</a>)</li>
 <li>Mosek 7.1 (<a href="https://www.mosek.com/resources/downloads">https://www.mosek.com/resources/downloads</a>).</li>
 </ul>
 
 <p>CVX must be installed and linked with Matlab, and Mosek is invoked as the solver through the command <code>cvx_solver mosek</code>. Without Mosek, a user can still run the code with CVX if he comments out this line; however, the default solvers in CVX, such as <code>SDPT3</code> or <code>SeDuMi</code>.</p>
+
+<h3>
+<a id="file-structure" class="anchor" href="#file-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>File Structure</h3>
 
 <p>The empirical applications can be exactly replicated by the commented <code>master.m</code> in folders</p>
 
@@ -74,6 +79,11 @@
 </ul>
 
 <p>The scripts in folders <code>simulations</code> generate the simulation results. The master files are either <code>master_**</code> or <code>**_super</code>. Super parameters, such as <code>N</code>, <code>T</code> and <code>Rep</code>, should be provided outside of the main function or script.</p>
+
+<h3>
+<a id="cvx-tips" class="anchor" href="#cvx-tips" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CVX Tips</h3>
+
+<p>As emphasized in Section 3.2 of the Supplementary Material, we take advantage of convex programming to reduce the computational burden of high-dimensional optimization in each substep of the iterative algorithm. It is straightforward to utilize the convexity in the linear models. Probit regression with a linear index is a convex problem. To implement in CVX, we must formulate it as a disciplined convex programming (<a href="http://cvxr.com/dcp">http://cvxr.com/dcp</a>), which CVX accepts.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/frankshi">frankshi</a></p>
