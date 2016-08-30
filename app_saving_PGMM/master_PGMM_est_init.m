@@ -1,3 +1,4 @@
+% the paths produced by various initial values
 
 clear all
 global p T N d ;

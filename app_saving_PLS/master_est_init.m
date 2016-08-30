@@ -1,9 +1,4 @@
-% Liangjun Su, Zhentao Shi, Peter Phillips (2014)
-%
-% this script calculates the information criterion for the empirical
-% application in the paper.
-% the basic steps are similar to "master_est.m". Please refer to the
-% comments in that file.
+% the paths produced by various initial values
 
 clear
 global p
@@ -50,7 +45,7 @@ beta_hat0 = zeros(N, p);
 for i = 1:N
     yi = ds.y(ds.N == i );
     Xi = ds.X(ds.N == i, : );
-    beta_hat0(i,:) = regress( yi , Xi ); %initial value
+    beta_hat0(i,:) = regress( yi , Xi ); 
 end
 
 

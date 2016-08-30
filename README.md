@@ -1,9 +1,20 @@
-# C-Lasso Replication Package
+# C-Lasso
 
 #### Liangjun Su, Zhentao Shi and Peter Phillips
 
-We provide all code for the empirical applications and simulations in [“Identifying Latent Structures in Panel Data”](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2448189). Please contact Zhentao Shi ([zhentao.shi@cuhk.edu.hk](zhentao.shi@cuhk.edu.hk)) if you have any question about the code.
+We provide code for the empirical applications and simulations in [“Identifying Latent Structures in Panel Data”](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2448189). Please contact Zhentao Shi ([zhentao.shi@cuhk.edu.hk](zhentao.shi@cuhk.edu.hk)) if you have any question about the code.
 
+### Development Plan after Publication
+
+In response to demand, we may consider
+
+* provide user-friendly Matlab interface for general use.
+* translate the functions to R or other languages.
+
+We welcome interested researchers to develop the code with us.
+
+
+### Note for v1.0: Replication Package
 The results in the paper are generated under
 * Matlab 8.5
 * CVX 2.1 (http://cvxr.com/cvx/download/)  
