@@ -8,7 +8,7 @@ We provide code for the empirical applications and simulations in [“Identifyin
 
 ### Computation Environment
 
-For the Matlab code, [`CVX`]((http://cvxr.com/cvx/download/)) must be installed to implement convex optimization.
+For the Matlab code, [CVX](http://cvxr.com/cvx/download/) must be installed to implement convex optimization.
 [Mosek](https://www.mosek.com/resources/downloads) is recommended to facilitate CVX, but not necessary.
 
 ### Generic Functions
@@ -18,14 +18,14 @@ For the Matlab code, [`CVX`]((http://cvxr.com/cvx/download/)) must be installed 
 We add a folder `generic_functions` for the estimation procedures.
 The functions are ready to take input and return output.
 
-* `SSP_PLS_est` is a generic function to implement PLS.
+* `SSP_PLS_est.m` is a generic function to implement PLS.
 * `PLS_example.m` is a minimum example of PLS.
 
 ### Development Plan after Publication
 
 In response to demand, we may consider
 
-* provide user-friendly Matlab interface for general use.
+* provide user-friendly Matlab interface for general use (currently working under `generic_functions`)
 * translate the functions to R or other languages.
 
 We welcome interested researchers to develop the code with us.
