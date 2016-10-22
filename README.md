@@ -4,6 +4,23 @@
 
 We provide code for the empirical applications and simulations in [“Identifying Latent Structures in Panel Data”](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2448189). Please contact Zhentao Shi ([zhentao.shi@cuhk.edu.hk](zhentao.shi@cuhk.edu.hk)) if you have any question about the code.
 
+
+
+### Computation Environment
+
+For the Matlab code, [`CVX`]((http://cvxr.com/cvx/download/)) must be installed to implement convex optimization.
+[Mosek](https://www.mosek.com/resources/downloads) is recommended to facilitate CVX, but not necessary.
+
+### Generic Functions
+
+(This is working in progress...)
+
+We add a folder `generic_functions` for the estimation procedures.
+The functions are ready to take input and return output.
+
+* `SSP_PLS_est` is a generic function to implement PLS.
+* `PLS_example.m` is a minimum example of PLS.
+
 ### Development Plan after Publication
 
 In response to demand, we may consider
@@ -14,7 +31,7 @@ In response to demand, we may consider
 We welcome interested researchers to develop the code with us.
 
 
-### Note for v1.0: Replication Package
+## Note for v1.0: Replication Package
 The results in the paper are generated under
 * Matlab 8.5
 * CVX 2.1 (http://cvxr.com/cvx/download/)  
