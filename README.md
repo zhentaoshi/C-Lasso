@@ -1,8 +1,9 @@
 # C-Lasso
 
-#### Liangjun Su, Zhentao Shi and Peter Phillips
+* [Liangjun Su](http://www.mysmu.edu/faculty/ljsu/), [Zhentao Shi](http://www.zhentaoshi.com/) and [Peter Phillips](http://korora.econ.yale.edu/phillips/): [“Identifying Latent Structures in Panel Data”](http://onlinelibrary.wiley.com/doi/10.3982/ECTA12560/full), *Econometrica*, Vol.84, No.6, 2215-2264.
 
-We provide code for the empirical applications and simulations in [“Identifying Latent Structures in Panel Data”](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2448189). Please contact Zhentao Shi ([zhentao.shi@cuhk.edu.hk](zhentao.shi@cuhk.edu.hk)) if you have any question about the code.
+We provide code for the empirical applications and simulations in the paper. 
+Please contact Zhentao Shi ([zhentao.shi@cuhk.edu.hk](zhentao.shi@cuhk.edu.hk)) if you have any question about the code.
 
 
 
