@@ -14,6 +14,11 @@ load('balancedPanelX1995.mat')
 X = [lagsaving, cpi, interest, gdp];
 y = saving;
 
+% Note: Aug 4, 2018
+% A researcher asks about the time series initial value of `lagsaving` for each country.
+% The initial comes from the raw data that is longer than the compiled data for the regression,
+% which is not contained in `saving`
+
 
 p = size(X, 2);
 T = 15;
