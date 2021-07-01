@@ -12,8 +12,8 @@ function [d] = criterion2( a_old, a_new, optval_old, optval_new, tol)
 
     d = 0;
     
-    a_nominator = sum( norms( abs( a_old - a_new ), 2,2 ) );
-    a_denominator = sum( norms( abs( a_old ), 2, 2 ) ) + 0.001;
+    a_nominator = sum( abs( a_old - a_new )  );
+    a_denominator = sum( abs( a_old ) ) + 0.001;
 
     %%
     if a_nominator/ a_denominator < tol &&  (optval_old - optval_new < tol)
