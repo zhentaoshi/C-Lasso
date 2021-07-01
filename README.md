@@ -1,11 +1,16 @@
 # C-Lasso
 
-* [Liangjun Su](http://www.mysmu.edu/faculty/ljsu/), [Zhentao Shi](http://www.zhentaoshi.com/) and [Peter Phillips](http://korora.econ.yale.edu/phillips/): [“Identifying Latent Structures in Panel Data”](http://onlinelibrary.wiley.com/doi/10.3982/ECTA12560/full), *Econometrica*, Vol.84, No.6, 2215-2264.
+This is the Matlab code for the empirical applications and simulations of
 
-We provide code for the empirical applications and simulations in the paper. 
+* [Liangjun Su](http://www.mysmu.edu/faculty/ljsu/), [Zhentao Shi](http://www.zhentaoshi.com/) and [Peter Phillips](http://korora.econ.yale.edu/phillips/): [“Identifying Latent Structures in Panel Data”](http://onlinelibrary.wiley.com/doi/10.3982/ECTA12560/full) (2016), *Econometrica*, Vol.84, No.6, 2215-2264.
+
 Please contact Zhentao Shi ([zhentao.shi@cuhk.edu.hk](zhentao.shi@cuhk.edu.hk)) if you have any question about the code.
 
+**R users please check [github.com/zhan-gao/classo](https://github.com/zhan-gao/classo).**
 
+A follow-up paper is composed to further investigate the computational speed of C-Lasso. Please refer to:
+
+* Zhan Gao and Zhentao Shi (2020): "[Implementing Convex Optimization in R: Two Econometric Examples](https://arxiv.org/abs/1806.10423)", arXiv:1806.10423
 
 ### Computation Environment
 
@@ -13,8 +18,6 @@ For the Matlab code, [CVX](http://cvxr.com/cvx/download/) must be installed to i
 [Mosek](https://www.mosek.com/resources/downloads) is recommended to facilitate CVX, but not necessary.
 
 ### Generic Functions
-
-(This is working in progress...)
 
 We add a folder `generic_functions` for the estimation procedures.
 The functions are ready to take input and return output.
@@ -24,10 +27,9 @@ The functions are ready to take input and return output.
 
 ### Development Plan after Publication
 
-In response to demand, we may consider
+In response to demand, we may further consider
 
 * provide user-friendly Matlab interface for general use (currently working under `generic_functions`)
-* translate the functions to R or other languages.
 
 We welcome interested researchers to develop the code with us.
 
