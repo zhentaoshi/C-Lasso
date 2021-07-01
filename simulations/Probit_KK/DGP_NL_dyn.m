@@ -20,10 +20,10 @@ function [Y, X] = DGP_NL_dyn(N, T, a0, const)
     y0 = binornd(1, 0.5, N, 1);
     for t = 1:TT
         if t == 1
-            ystar(:,t) = [y0, x2(:, t) ] * a0 + mu+ const + e(:,t);
+            ystar(:,t) = [y0, x2(:, t) ] * a0 + 0.1*mu+ const + e(:,t);
             y(:,t) = (ystar(:,t) > 0);
         else
-            ystar(:,t) = [y(:, t-1), x2(:, t) ] * a0 +mu+ const + e(:,t);
+            ystar(:,t) = [y(:, t-1), x2(:, t) ] * a0 + 0.1*mu+ const + e(:,t);
             y(:,t) = (ystar(:,t) > 0);
         end
     end
