@@ -24,6 +24,8 @@ for tt = 1:2
     y_mat = reshape(y_half, [half_t Nk]);
     X_mat = reshape(X_half, [half_t Nk p]);
     
+    % The demean is carried out for each column, 
+    % therefore it's a within-group demean.
     y_mat = demean(y_mat);
     for pp = 1:p
         X_mat(:,:,pp) = demean( X_mat(:,:,pp) );
