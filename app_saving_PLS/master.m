@@ -42,13 +42,21 @@ for i = 1:N
     mean_yi = mean(yi);
     yi = bsxfun(@minus, yi, mean(yi) );
     y(index.N == i) = yi/std(yi, 1);
-    y_raw(index.N==i) = y(index.N == i) + mean_yi;
+    % Note: Jan 25, 2025
+    % The previous version (2020-04-04) used the following line:
+    % y_raw(index.N == i) = y(index.N == i) + mean_yi;
+    % This line has a redundant add-up-mean. Now it is removed.
+    % This modification of code does not change the results at all.
+    y_raw(index.N==i) = y(index.N == i);
     
     Xi = X(index.N == i, : );
     mean_Xi = mean(Xi);
     Xi = bsxfun(@minus, Xi, mean(Xi) );
     X(index.N == i, :) = Xi./repmat( std(Xi, 1), [T 1] ) ;
-    X_raw(index.N == i, :) = X(index.N == i, :) + repmat( mean(Xi), [T 1]);
+    % Note: Jan 25, 2025
+    % The previous version (2020-04-04) used the following line:
+    % X_raw(index.N == i, :) = X(index.N == i, :) + repmat( mean(Xi), [T 1]);
+    X_raw(index.N == i, :) = X(index.N == i, :);
 end
 
 ds = dataset( code, year, y, X, y_raw, X_raw );
